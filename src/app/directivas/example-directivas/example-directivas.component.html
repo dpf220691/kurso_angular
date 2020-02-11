@@ -1,0 +1,16 @@
+<div *ngIf="show;then mostrar else nomostrar">
+</div>
+
+<ng-template #mostrar>
+    <ul>
+        <li *ngFor="let color of colors; let o = odd; let l = last; let e = even" 
+            [style.color]="color" 
+            [ngClass]="{'par':e && !l, 'impar':o &&!l, 'ultima':l}" 
+            [ngSwitch]="color"> 
+                <span *ngSwitchCase="'blue'">Soy azul</span>
+                <span *ngSwitchDefault>{{color | uppercase}}</span>            
+        </li>
+    </ul>
+</ng-template>
+
+<ng-template #nomostrar>No se puede mostrar el componente</ng-template>
