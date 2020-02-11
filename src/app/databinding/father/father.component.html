@@ -1,0 +1,11 @@
+<button (click)= "onClick()">Hablar al hijo</button>
+<p></p>
+
+<app-child
+[message]="messageToChild"
+(reply)="responseFromChild($event)">
+</app-child>
+
+<p>Hijo contesta: {{messageFromChild}}</p>
+
+<button (click)= "onClickRedirect()">Ir a Directivas</button>

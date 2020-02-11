@@ -8,7 +8,7 @@
             [ngClass]="{'par':e && !l, 'impar':o &&!l, 'ultima':l}" 
             [ngSwitch]="color"> 
                 <span *ngSwitchCase="'blue'">Soy azul</span>
-                <span *ngSwitchDefault>{{color | uppercase}}</span>            
+                <span *ngSwitchDefault>{{ color | decorator:'**' | uppercase }}</span>            
         </li>
     </ul>
 </ng-template>
