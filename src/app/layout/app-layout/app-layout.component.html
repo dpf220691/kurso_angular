@@ -1,0 +1,15 @@
+<div [style.background]="'orange'">
+    <p>App Layout</p>
+    <br>
+    <nav>
+        <ul>
+            <li><a [routerLink]="['/directivas']">Directivas</a></li>
+            <li><a [routerLink]="['/databinding']">Data Binding</a></li>
+            <li><a [routerLink]="['/databinding/kurso']" [queryParams]="{ clave: 'valor' }">Kurso</a></li>
+        </ul>
+    </nav>
+    <div [style.background]="'white'" [style.margin]="'20px'">
+        <router-outlet></router-outlet>
+    </div>
+    <br>
+</div>

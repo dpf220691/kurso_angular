@@ -1,0 +1,9 @@
+<div>Soy el hijo {{id}}</div>
+<p>Estos son mis parametros: </p>
+<ul>
+    <li *ngFor="let key of queryParams.keys">
+        {{key}}: {{queryParams.get(key)}}
+    </li>
+</ul>
+
+<button (click)= "onSave()">Guardar</button>
